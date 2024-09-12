@@ -22,6 +22,15 @@
     },
     {
       "include": "#records"
+    },
+    {
+      "include": "#function-calls"
+    },
+    {
+      "include": "#type-identifiers"
+    },
+    {
+      "include": "#identifiers"
     }
   ],
   "repository": {
@@ -29,7 +38,7 @@
       "patterns": [
         {
           "name": "keyword.control.absurd",
-          "match": "\\b(sh|let|if|else|elif|return|while|loop|break|match|mod|use|as|from|enum|async|await|type|pub|mut|func|number|string|bool|char|null|void|true|false)\\b"
+          "match": "\\b(sh|let|if|else|elif|return|while|loop|break|match|mod|use|as|from|enum|async|await|type|pub|mut|func|true|false)\\b"
         }
       ]
     },
@@ -59,73 +68,13 @@
       "name": "constant.numeric.absurd",
       "match": "\\b\\d+(\\.\\d+)?\\b"
     },
-    "vectors": {
-      "name": "meta.collection.vector.absurd",
-      "begin": "\\[",
-      "end": "\\]",
-      "patterns": [
-        {
-          "include": "#numbers"
-        },
-        {
-          "include": "#strings"
-        },
-        {
-          "include": "#chars"
-        },
-        {
-          "name": "constant.language.boolean.absurd",
-          "match": "\\b(true|false)\\b"
-        }
-      ]
+    "identifiers": {
+      "name": "variable.other.absurd",
+      "match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b"
     },
-    "tuples": {
-      "name": "meta.collection.tuple.absurd",
-      "begin": "\\(",
-      "end": "\\)",
-      "patterns": [
-        {
-          "include": "#numbers"
-        },
-        {
-          "include": "#strings"
-        },
-        {
-          "include": "#chars"
-        },
-        {
-          "name": "constant.language.boolean.absurd",
-          "match": "\\b(true|false)\\b"
-        }
-      ]
-    },
-    "records": {
-      "name": "meta.collection.record.absurd",
-      "begin": "\\{",
-      "end": "\\}",
-      "patterns": [
-        {
-          "name": "variable.other.key.absurd",
-          "match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b"
-        },
-        {
-          "name": "punctuation.separator.key-value.absurd",
-          "match": ":"
-        },
-        {
-          "include": "#numbers"
-        },
-        {
-          "include": "#strings"
-        },
-        {
-          "include": "#chars"
-        },
-        {
-          "name": "constant.language.boolean.absurd",
-          "match": "\\b(true|false)\\b"
-        }
-      ]
+    "type-identifiers": {
+      "name": "support.type.absurd",
+      "match": "\\b(bool|string|number|null|void|Vec|Record|Tuple)\\b"
     }
   },
   "scopeName": "source.absurd"

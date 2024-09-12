@@ -3,7 +3,7 @@
   "displayName": "absurd",
   "description": "Absurd programming language",
   "publisher": "ykk2b",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "repository": "https://github.com/absurd-lang/absurd",
   "license": "MIT",
   "engines": {
@@ -30,7 +30,7 @@
     "grammars": [
       {
         "language": "absurd",
-        "scopeName": "",
+        "scopeName": "source.absurd",
         "path": "./syntaxes/absurd.tmLanguage.json"
       }
     ]
