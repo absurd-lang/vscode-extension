@@ -1,0 +1,38 @@
+{
+  "name": "absurd",
+  "displayName": "absurd",
+  "description": "Absurd programming language",
+  "publisher": "ykk2b",
+  "version": "0.0.1",
+  "repository": "https://github.com/absurd-lang/absurd",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.93.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "absurd",
+        "aliases": [
+          "Absurd",
+          "absurd"
+        ],
+        "extensions": [
+          ".abs",
+          ".ab"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "absurd",
+        "scopeName": "",
+        "path": "./syntaxes/absurd.tmLanguage.json"
+      }
+    ]
+  }
+}
